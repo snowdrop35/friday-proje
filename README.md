@@ -1,1 +1,1 @@
-# blog-web
+# friday-proje
