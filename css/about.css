@@ -35,13 +35,16 @@
 }
 
 .aboutInfosLeftContainer{
-    width: 180px;
+    width: 190px;
     min-height: 300px;
 }
-
 .aboutInfosRightContainer{
-    border: 1px solid;
-    flex: 1;
+    width: calc(100% - 180px);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-x: scroll;
 }
 .aboutInfosLeftItemContainer{
     display: flex;
@@ -52,6 +55,72 @@
     color: #000;
 }
 .aboutInfosLeftItemContainer span{
-    font-size: 12px;
-    
+    font-size: 12px;  
 }
+.projectCardsMainContainer{
+    width: 75%;
+    display: flex;
+    gap: 20px;
+}
+.simpleProjectCardContainer{
+    width: 200px;
+    background-color:white;
+    border-radius: 4px;
+   
+}
+.simpleProjectCardImgContainer{
+    width: 200px;
+    height: 200px;
+}
+.simpleProjectCardImgContainer img{
+    width: 100%;
+}
+.simpleProjectCardTitle{
+    padding: 10px;
+}
+.simpleProjectCardDescription{
+    padding: 10px;
+}
+.simpleProjectCardLinkContainer{
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+.simpleProjectCardLinkContainer a{
+    text-decoration: none;
+    border: 1px solid #65647C;
+    padding: 5px 20px;
+    color: #65647C;
+    transition: all 0.2s linear;/*linear – Başlangıç ve bitişi aynı hızda bir geçiş efekti belirtir.*/
+    border-radius: 5px;
+}
+.simpleProjectCardLinkContainer a:hover{
+    background-color: #65647C;
+    color: #fff;
+}
+/* Responsive  */
+@media screen and (min-wdth:1200px){
+    .aboutMainContainer{
+        padding: 50px 200px;
+    }
+}
+@media screen and (max-width:500px) {
+    .aboutDescriptionContainer{
+        flex-direction: column;
+    }
+    .aboutDescriptionContainer h3, 
+    .aboutDescriptionContainer h4{
+        text-align: center;
+    }
+    .aboutInfosContainer{
+        flex-direction: column-reverse;
+    }
+    .aboutInfosRightContainer{
+        width: 100%;
+    }
+    .aboutInfosLeftContainer{
+        width: 100%;
+        min-height: 0;
+    }   
+}
+ 
